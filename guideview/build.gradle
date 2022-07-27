@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 25
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+//publish {// 新增
+//
+//    userOrg = 'binioter'// 注册bintray时的username
+//
+//    groupId = 'com.binioter'// 项目包名
+//
+//    artifactId = 'guideview'// 项目名
+//
+//    publishVersion = '1.0.0'// 发布版本号
+//
+//    desc = 'A mask guide component for novice guide'// 项目描述，可选项
+//
+//    website = 'https://github.com/binIoter/GuideView'// 项目站点，可选项
+//
+//}
